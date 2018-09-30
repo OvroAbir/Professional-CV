@@ -1,0 +1,213 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{comment}
+\usepackage{fancyhdr}
+\usepackage{marvosym}
+\usepackage{fontspec}           %for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip}   %other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo}        %better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular}         %for Grades
+\usepackage{titlesec}         %custom \section
+
+\usepackage{longtable}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+%\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+%\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+\hypersetup{%
+  colorlinks=false,% hyperlinks will be black
+  linkbordercolor=black,% hyperlink borders will be black
+  pdfborderstyle={/S/U/W 1}% border style will be underline of width 1pt
+}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+% \begin{textblock}{1}(0,0)
+%   \rotatebox{-90}{\parbox{500mm}{
+%     Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%     {\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%   }
+% }
+% \end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+    {\Huge Joy \textsc{Ghosh}
+  }\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+%\section{Personal Data}
+
+\begin{tabular}{rl}
+    %\textsc{Place and Date of Birth:} & Someplace, Italy  | dd Month 1912 \\
+    %\textsc{Address:}   & CV Inn 19, 20301, Milano, Italy \\
+    \textsc{Mobile}     & +880-1683701103\\
+    \textsc{Email}     & joyghosh826@gmail.com \\
+    \textsc{Website}     & \href{https://ovro.bitbucket.io/}{https://ovro.bitbucket.io}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{Current} & Junior Software Engineer at \href{http://www.konai.com}{\textsc{KONA Software Lab Ltd.}}, Dhaka \\
+ \textsc{Feb 2018} & \\
+ & Worked on a project that can update an existing Operating System in IOT devices \\ 
+ & Worked with C, u-boot, wandboard quad. \\
+& \\
+& Working on a project to optimize existing runtime of read write \mbox{operation} in a USIM product. \\
+& Working with Java, USIM card.
+
+\end{tabular}
+
+
+\begin{tabular}{r|p{11cm}}
+ \emph{Jan 2018} & Junior Programmer at \href{http://www.ctrends-software.com}{\textsc{CTrends Software and Services Ltd.}}, Dhaka \\\textsc{Oct 2017} & Worked on automating business processes in \emph{Enterprise Business} \\ & \emph{Solution} Software.\\
+ & Worked with Spring MVC, Hibernate, HTML5, CSS3, Bootstrap, JavaScript, PostgreSQL.
+\end{tabular}
+
+%Section: Research Interest
+\section{Research Interests}
+Software Engineering, Algorithms,  Social Media Data Analytics, Cloud Computing, Applied Artificial Intelligence
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl} 
+ \textsc{Sept}, 2017 & B. Sc. in \href{https://cse.buet.ac.bd/}{\textsc{Computer Science and Engineering}} \\
+ & \href{http://www.buet.ac.bd/}{\textbf{Bangladesh University of Engineering and Technology}}, Dhaka \\
+& \normalsize \textsc{CGPA}: 3.39 / 4.00 \\
+
+&\\
+
+2012 & Higher Secondary School Certificate \\
+ & \href{http://www.notredamecollege-dhaka.com/}{\textbf{Notre Dame College}}, Dhaka \\
+ & \normalsize \textsc{GPA}: 5.0 / 5.0 \\
+&\\
+
+2010 & Secondary School Certificate \\
+ & \href{http://www.sghsbd.com/}{\textbf{St. Gregory's High School}}, Dhaka \\
+ & \normalsize \textsc{GPA}: 5.0 / 5.0 \\
+
+\end{tabular}
+
+%Section: Scholarships and additional info
+\begin{comment}
+\section{Scholarships and Certificates}
+\begin{tabular}{rl}
+ \textsc{Sept.} 2006 & Scholarship for graduate students with an outstanding curriculum \footnotesize(\EURcr 30,000)\normalsize\\
+\textsc{June} 2006 & {\textsc{Gmat}\textregistered}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}: 730 (\textsc{q:50;v:39}) 96\textsuperscript{th} percentile; \textsc{awa}: 6.0/6.0 (89\textsuperscript{th} percentile)
+\end{tabular}
+\end{comment}
+
+\section{Skills}
+\begin{tabular}{rl}
+Language & C/C++, Java, Python, \textsc{PHP}\\
+Database & Oracle \textsc{SQL}, My\textsc{SQL}, PostgreSQL \\
+Web Development & \textsc{HTML5}, \textsc{CSS3}, Bootstrap, JavaScript, jQuery \\
+Framework & Laravel, Spring MVC \\
+IDE and Tools & Git, CodeBlocks, Visual Studio, NetBeans, Eclipse, Android Studio, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf} \\
+\end{tabular}
+
+
+\section{Notable projects}
+\begin{longtable}{rl}
+
+  \textsc{Tutorial Buddy} & A tool that can extract intervals relevant to some topics or keywords \\
+  & from a lengthy \textsc{YouTube} video \\
+  & Used Python, Tesseract \textsc{OCR}, \textsc{OpenCV}, Wit.ai Speech recognition API \\
+  
+  & \\
+  
+  \textsc{Movies360} & A movie website similar to \textsc{IMDB} \\
+  & Used Laravel, My\textsc{SQL}, \textsc{HTML5}, \textsc{CSS3}, \textsc{PHP} \\
+
+  & \\
+
+  \textsc{Spade} & A multiplayer card game to play via \textsc{LAN} \\
+  & Used Java, Java Swing, Java Socket Programming\\
+
+
+  & \\
+
+  \textsc{Personal Website} & Website designed by me and hosted at \href{https://ovro.bitbucket.io/}{https://ovro.bitbucket.io} \\
+  & Used BootStrap, CSS3, JQuery, HTML5 \\
+
+  & \\
+
+  \textsc{Train Alert} & Android app that alerts user about nearby trains to stop accident. \\
+  & Location of train is sent to central server. App reads those location \\
+  & from server through internet. \\
+  & Used Google Play services location API, \textsc{REST} API, My\textsc{SQL}, \\
+  & Respberry Pi, GPS module \\
+  
+  & \\
+
+  \textsc{Graph Plotter} & A tool that can plot \textsc{2D} and \textsc{3D} graphs \\
+  & Used C, igraphics \\
+
+  & \\
+
+  \textsc{PyCalendar} & A calendar tool \\
+  & Used Python
+
+\end{longtable}
+
+
+\section{Strengths}
+\begin{itemize}
+\item Team player.
+\item Good grasping capability.
+\item Prefer to work from the beginning rather than waiting for the deadline.
+\end{itemize}
+
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
