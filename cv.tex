@@ -1,6 +1,7 @@
 \documentclass[a4paper,10pt]{article}
 
 %A Few Useful Packages
+
 \usepackage{comment}
 \usepackage{fancyhdr}
 \usepackage{marvosym}
@@ -8,8 +9,11 @@
 \usepackage{xunicode,xltxtra,url,parskip}   %other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[big]{layaureo}        %better formatting of the A4 page
+%\usepackage[big]{layaureo}        %better formatting of the A4 page
 % an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{fullpage}
+\usepackage{geometry}
+\geometry{margin=0.4in}
 \usepackage{supertabular}         %for Grades
 \usepackage{titlesec}         %custom \section
 
@@ -39,8 +43,12 @@ ItalicFont = Fontin-Italic.otf
 
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
+
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{3pt}{3pt}
+\titlespacing{\section}{0pt}{0.2pt}{0.1pt}
+\setlength{\floatsep}{-0.5cm} % for reducing space
+\addtolength{\parskip}{-0.5mm} %for reducing spcae
+
 %Tweak a bit the top margin
 %\addtolength{\voffset}{-1.3cm}
 
@@ -49,7 +57,7 @@ ItalicFont = Fontin-Italic.otf
 
 %-------------WATERMARK TEST [**not part of a CV**]---------------
 \usepackage[absolute]{textpos}
-
+\usepackage{enumitem}
 \setlength{\TPHorizModule}{30mm}
 \setlength{\TPVertModule}{\TPHorizModule}
 \textblockorigin{2mm}{0.65\paperheight}
@@ -70,7 +78,7 @@ ItalicFont = Fontin-Italic.otf
 % }
 % \end{textblock}
 %}
-
+\vspace{-\baselineskip}
 \pagestyle{empty} % non-numbered pages
 
 \font\fb=''[cmr10]'' %for use with \LaTeX command
@@ -82,66 +90,123 @@ ItalicFont = Fontin-Italic.otf
 
 %--------------------SECTIONS-----------------------------------
 %Section: Personal Data
-%\section{Personal Data}
-\begin{comment}
-\begin{tabular}{rl}
-    %\textsc{Place and Date of Birth:} & Someplace, Italy  | dd Month 1912 \\
-    %\textsc{Address:}   & CV Inn 19, 20301, Milano, Italy \\
-    \textsc{Mobile}     & +880-1683701103\\
-    %\textsc{Email}     & joyghosh826@gmail.com \\
-    %\textsc{Website}     & \href{https://ovro.bitbucket.io/}{https://ovro.bitbucket.io}
-\end{tabular}
-\end{comment}
-
-\begin{tabular}{p{1cm}p{4cm}p{1cm}p{1.2cm}p{3cm}}
-     \textsc{Email} & joyghosh826@gmail.com
+\begin{tabular}{p{1.5cm}p{4cm}p{5cm}p{1.5cm}p{5cm}}
+     \textsc{Email} & \href{mailto:joyghosh826@gmail.com}{joyghosh826@gmail.com}
      & & 
      \textsc{Website} & \href{www.ijoyghosh.com}{www.ijoyghosh.com} \\
-     \textsc{Mobile} & +880-1683701103 & & &
+     \textsc{Mobile} & \href{tel:8801683701103}{+880-1683701103} & & LinkedIn & \href{https://www.linkedin.com/in/joy-ghosh}{www.linkedin.com/in/joy-ghosh} \\
+     & & & GitHub & \href{https://github.com/OvroAbir}{github.com/OvroAbir}
 \end{tabular}
 
-%Section: Work Experience at the top
-\section{Work Experience}
-\begin{tabular}{r|p{11cm}}
- \emph{Current -} & Junior Software Engineer at \href{http://www.konai.com}{\textsc{KONA Software Lab Ltd.}}, Dhaka \\
- \textsc{Feb 2018} & \\
- & Worked on a project that can update an existing Operating System in IOT devices \\ 
- & Worked with C, u-boot, wandboard quad. \\
-& \\
-& Working on a project to optimize existing runtime of read write \mbox{operation} and authentication procedure in a USIM product. \\
-& Working with Java, USIM card.
-
-\end{tabular}
-
-
-\begin{tabular}{r|p{11cm}}
- \emph{Jan 2018 -} & Junior Programmer at \href{http://www.ctrends-software.com}{\textsc{CTrends Software and Services Ltd.}}, Dhaka \\\textsc{Oct 2017} & Worked on automating business processes in \emph{Enterprise Business} \\ & \emph{Solution} Software.\\
- & Worked with Spring MVC, Hibernate, HTML5, CSS3, Bootstrap, JavaScript, PostgreSQL.
-\end{tabular}
-
-%Section: Research Interest
-\section{Research Interests}
-Software Engineering, Security, , Operating System, Algorithm, Artificial Intelligence, Social Media Data Analytics
 
 %Section: Education
 \section{Education}
-\begin{tabular}{rl} 
- \textsc{Sept}, 2017 & B. Sc. in \href{https://cse.buet.ac.bd/}{\textsc{Computer Science and Engineering}} \\
- & \href{http://www.buet.ac.bd/}{\textbf{Bangladesh University of Engineering and Technology}}, Dhaka \\
-& \normalsize \textsc{CGPA}: 3.39 / 4.00 \\
+\begin{tabular}{p{1.8cm}|l} 
 
-&\\
-
-\textsc{July}, 2012 & Higher Secondary School Certificate \\
- & \href{http://www.notredamecollege-dhaka.com/}{\textbf{Notre Dame College}}, Dhaka \\
- & \normalsize \textsc{GPA}: 5.0 / 5.0 \\
-&\\
-
-\textsc{May}, 2010 & Secondary School Certificate \\
- & \href{http://www.sghsbd.com/}{\textbf{St. Gregory's High School}}, Dhaka \\
- & \normalsize \textsc{GPA}: 5.0 / 5.0 
+  \textsc{Aug}, 2021 & M. S. in \href{https://compsci.colostate.edu}{\textsc{Computer Science}} \\
+ (Expected) & \href{https://www.colostate.edu/}{\textbf{Colorado State University}}, Fort Collins, Colorado
+%& \normalsize \textsc{CGPA}: 3.39 / 4.00 \\
 
 \end{tabular}
+
+\begin{tabular}{p{1.8cm}|l}
+ \textsc{Sept}, 2017 & B. Sc. in \href{https://cse.buet.ac.bd/}{\textsc{Computer Science and Engineering}} \\
+ & \href{http://www.buet.ac.bd/}{\textbf{Bangladesh University of Engineering and Technology}}, Dhaka, Bangladesh
+
+\end{tabular}
+
+\begin{comment}
+
+%Section: Education
+\section{Education}
+%\setlist{nolistsep}
+\begin{itemize}%[noitemsep]
+    \item M. S. in \href{https://compsci.colostate.edu}{\textsc{Computer Science}} \hfill (Expected \textsc{Aug, 2021})  \\
+    \href{https://www.colostate.edu/}{\textbf{Colorado State University}}, Fort Collins, Colorado
+%& \normalsize \textsc{CGPA}: 3.39 / 4.00 \\
+    
+    \item B. Sc. in \href{https://cse.buet.ac.bd/}{\textsc{Computer Science and Engineering}} \hfill (\textsc{Sept, 2017}) \\
+    \href{http://www.buet.ac.bd/}{\textbf{Bangladesh University of Engineering and Technology}}, Dhaka, Bangladesh
+%& \normalsize \textsc{CGPA}: 3.39 / 4.00 \\
+
+%&\\
+
+%\textsc{July}, 2012 & Higher Secondary School Certificate \\
+% & \href{http://www.notredamecollege-dhaka.com/}{\textbf{Notre Dame College}}, Dhaka \\
+% & \normalsize \textsc{GPA}: 5.0 / 5.0 \\
+%&\\
+
+%\textsc{May}, 2010 & Secondary School Certificate \\
+% & \href{http://www.sghsbd.com/}{\textbf{St. Gregory's High School}}, Dhaka \\
+% & \normalsize \textsc{GPA}: 5.0 / 5.0 
+
+\end{itemize}
+
+\end{comment}
+
+%Section: Work Experience at the top
+
+\section{Work Experience}
+\begin{itemize}
+    \item Graduate Research Assistant at \href{http://compsci.colostate.edu}{\textsc{Department of Computer Science}}, \hfill (Current - Aug 2019) \\
+    \href{https://www.co slostate.edu}{\textsc{\textbf{Colorado State University}}}, Fort Collins, Colorado.
+    Research Area - Software Engineering.
+    
+    \item Junior Software Engineer at \href{http://www.konai.com}{\textsc{KONA Software Lab Ltd.}}, Dhaka \hfill (May 2019 - Feb 2018)
+    %\setlist{nolistsep}
+    \begin{itemize}%[noitemsep]
+         \item Decreased file read/write time in \textbf{USIM} card by \textbf{26\%} after changing internal file system data structure to hash map based architecture. Used \textbf{Java} and followed \textbf{3GPP}, \textbf{ETSI} standards.
+         \item Decreased 4G authentication time of \textbf{USIM} card by \textbf{31\%} by skipping common calculations.
+         \item Developed features like undo/redo operations for GUI based USIM personalization tool using \textbf{Java Swing}.
+         \item Researched different \textbf{Delta encoding} algorithms for FOTA servers and tested their performance on \textbf{Wandboard Quad}. Worked with \textbf{C}, \textbf{u-boot}.
+    \end{itemize}
+    
+    \item Junior Programmer at \href{http://www.ctrends-software.com}{\textsc{CTrends Software and Services Ltd.}}, Dhaka \hfill (Jan 2018 - Oct 2017)
+    \begin{itemize}
+         \item Worked on automating business processes in ERP Software. Used \textbf{Spring MVC}, \textbf{Hibernate}, \textbf{HTML5}, \textbf{CSS3},\\ \textbf{Bootstrap}, \textbf{jQuery}, \textbf{PostgreSQL}.
+     \end{itemize}
+     
+\end{itemize}
+
+\begin{comment}
+
+\section{Work Experience}
+
+\begin{tabular}{r|p{15cm}}
+ \textsc{Current -} & Graduate Research Assistant at \href{http://compsci.colostate.edu}{\textsc{Department of Computer Science}}, \\
+ \textsc{Aug 2019 } & \href{https://www.co slostate.edu}{\textsc{Colorado State University}}, Fort Collins, Colorado \\
+ 
+ & Research Area : Software Engineering \\
+
+\end{tabular}
+
+\begin{tabular}{p{1.55cm}|p{14.55cm}}
+ \textsc{May 2019 - Feb 2018} & Junior Software Engineer at \href{http://www.konai.com}{\textsc{KONA Software Lab Ltd.}}, Dhaka
+ 
+ \begin{itemize}
+     \item Decreased file read/write time in USIM card by 26\% after changing internal file system data structure to hash map based architecture. Used Java and followed 3GPP, ETSI standards.
+     \item Decreased authentication time of 4G USIM card by 71\% by skipping common calculations.
+     \item Developed features like undo/redo operations for GUI based USIM personalization tool using Java Swing.
+     \item Researched delta encoding algorithms for FOTA servers and tested their performance on Wandboard Quad. Worked with C, u-boot.
+ \end{itemize}
+\end{tabular}
+
+
+\begin{tabular}{p{1.55cm}|p{14.55cm}}
+     \textsc{Jan 2018 - Oct 2017} & Junior Programmer at \href{http://www.ctrends-software.com}{\textsc{CTrends Software and Services Ltd.}}, Dhaka
+     
+     \begin{itemize}
+         \item Worked on automating business processes in \emph{ERP} Software. Used Spring MVC, Hibernate, HTML5, CSS, Bootstrap, JavaScript, PostgreSQL.
+     \end{itemize}
+\end{tabular}
+
+\end{comment}
+
+
+%Section: Research Interest
+%\section{Research Interests}
+%Software Engineering, Security, , Operating System, Algorithm, Artificial Intelligence, Social Media Data Analytics
+
 
 %Section: Scholarships and additional info
 \begin{comment}
@@ -152,72 +217,105 @@ Software Engineering, Security, , Operating System, Algorithm, Artificial Intell
 \end{tabular}
 \end{comment}
 
-
-\section{Academic Honors}
-\begin{itemize}
-    \item 
-    Technical Scholarship, Bangladesh University of Engineering and Techonology (2013)
-
-\end{itemize}
-
 \section{Skills}
 \begin{tabular}{rl}
 Language & C/C++, Java, Python, \textsc{PHP}\\
 Database & Oracle \textsc{SQL}, My\textsc{SQL}, PostgreSQL \\
 Web Development & \textsc{HTML5}, \textsc{CSS3}, Bootstrap, JavaScript, jQuery \\
 Framework & Laravel, Spring MVC \\
-IDE and Tools & Git, CodeBlocks, Visual Studio, NetBeans, Eclipse, Android Studio, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf} \\
 \end{tabular}
 
-\clearpage
-\section{Notable projects}
-\begin{longtable}{rl}
+\section{Notable Projects}
 
-  \textsc{Tutorial Buddy} & A tool that can extract intervals relevant to some topics or keywords \\
-  & from a lengthy \textsc{YouTube} video \\
-  & Used Python, Tesseract \textsc{OCR}, \textsc{OpenCV}, Wit.ai Speech recognition API \\
-  
-  & \\
-  
-  \textsc{Movies360} & A movie website similar to \textsc{IMDB} \\
-  & Used Laravel, My\textsc{SQL}, \textsc{HTML5}, \textsc{CSS3}, \textsc{PHP} \\
+\begin{itemize}
+    \item \textsc{Tutorial Buddy} - 
+    %\begin{itemize}
+        %\item 
+        Developed a tool that can identify when a certain topic was discussed in a lengthy \textsc{YouTube} video. 
+        Used \textbf{Python}, \textbf{Tesseract OCR}, \textbf{OpenCV}, \textbf{Wit.ai Speech Recognition} API.
+    %\end{itemize}
+    
+    \item \textsc{USNews Scrapper} - 
+    %\begin{itemize}
+        %\item 
+        Developed a tool to store University ranking information from \href{https://www.usnews.com/best-graduate-schools}{\textbf{usnews.com}} in \textbf{excel} file. 
+        Used \textbf{Python}.
+    \begin{itemize}
+        \item 
+        Can be installed by \href{https://github.com/OvroAbir/USNews-Scrapper}{{\normalsize\textbf{pip install usnews-scrapper}}} command.
+    \end{itemize}
+    
+    \item \textsc{Movies360} - 
+    %\begin{itemize}
+        %\item 
+        Developed a movie website similar to \textsc{IMDB}.
+        Used \textbf{Laravel}, \textbf{MySQL}, \textbf{HTML5}, \textbf{CSS3}, \textbf{PHP}.
+    %\end{itemize}
+    
+    \item \textsc{Spade} - 
+    %\begin{itemize}
+        %\item 
+        Developed a multiplayer card game to play via \textbf{LAN}.
+        Used \textbf{Java}, \textbf{Java Swing}, \textbf{Socket Programming}.
+    %\end{itemize}
+    
+    \item \textsc{Personal Website} - 
+    %\begin{itemize}
+        %\item 
+        Developed a website hosted at \href{http://www.ijoyghosh.com}{\textbf{www.ijoyghosh.com}}.
+        Used \textbf{BootStrap}, \textbf{CSS3}, \textbf{jQuery}.
+    %\end{itemize}
+    
+    \item \textsc{Train Alert} - 
+    %\begin{itemize}
+        %\item 
+        Developed an \textbf{Android} app that alerts user about nearby trains to stop accident.
+        Used \textbf{Google Play services} location API, \textbf{REST} API, \textbf{MySQL}, \textbf{Raspberry Pi}, \textbf{GPS module}.
+    %\end{itemize}
+    
+   \item \textsc{4-bit PC} -  
+   %\begin{itemize}
+       %\item 
+       Designed 4-bit PC with \textbf{MIPS} architecture and  simple instructions as a hardware project.
+   %\end{itemize}
+   
+   \item \textsc{Graph Plotter} - 
+   %\begin{itemize}
+       %\item 
+       Developed a tool that can plot \textsc{2D} and \textsc{3D} graphs from equations.
+       Used \textbf{C}, \textbf{iGraphics}.
+   %\end{itemize}
+   
+   \item \textsc{PyCalendar} - 
+   %\begin{itemize}
+       %\item 
+       Developed calendar tool. 
+       Used \textbf{Python}.
+   %\end{itemize}
 
-  & \\
-
-  \textsc{Spade} & A multiplayer card game to play via \textsc{LAN} \\
-  & Used Java, Java Swing, Java Socket Programming\\
+\end{itemize}
 
 
-  & \\
 
-  \textsc{Personal Website} & Website designed by me and hosted at \href{http://www.ijoyghosh.com}{http://www.ijoyghosh.com} \\
-  & Used BootStrap, CSS3, JQuery, HTML5 \\
+\section{Academic Honors}
+\setlist{nolistsep}
+\begin{itemize}
+    \item 
+    Technical Scholarship from Bangladesh University of Engineering and Technology (2013)
+    \begin{itemize}
+        \item Awarded for good performance in B.Sc. admission test. Ranked \textbf{186th} out of nationwide 50,000 applicants.
+    \end{itemize}
+\end{itemize}
 
-  & \\
+\section{Other Activities}
+\begin{itemize}
+    \item Tutored an undergraduate student on CS courses like - Algorithms, Data Structure, Digital Logic Design, OOP, Artificial Intelligence for over 2 years.
+    
+    \item Created \href{https://subscene.com/subtitles/man-of-steel/bengali/805207}{Bengali subtitle of 'Man of Steel'} with a rating of 10/10 and over 2800 downloads.
+\end{itemize}
 
-  \textsc{Train Alert} & Android app that alerts user about nearby trains to stop accident. \\
-  & Location of train is sent to central server. App reads those location \\
-  & from server through internet. \\
-  & Used Google Play services location API, \textsc{REST} API, My\textsc{SQL}, \\
-  & Respberry Pi, GPS module \\
-  
-  & \\
-  
-  \textsc{4-bit PC} & 4-bit PC with MIPS architecture and simple instructions \\
-  & A hardware project \\
-  
-  & \\
 
-  \textsc{Graph Plotter} & A tool that can plot \textsc{2D} and \textsc{3D} graphs \\
-  & Used C, igraphics \\
-
-  & \\
-
-  \textsc{PyCalendar} & A calendar tool \\
-  & Used Python
-
-\end{longtable}
-
+\begin{comment}
 \section{Research Experience}
 \begin{itemize}
     \item \textbf{\textsc{Topic-Relevant Fragment Extraction From Video Tutorials}} \\
@@ -226,6 +324,9 @@ IDE and Tools & Git, CodeBlocks, Visual Studio, NetBeans, Eclipse, Android Studi
     Summary : The target was to identify the interval when a certain topic was discussed in a very lengthy video. OCR, Speech-to-text were used to identify those intervals. To increase the efficiency of OCR 'Weighted Levenshtein distance' was used. The application was successfully tested with 985 min long \textsc{Youtube} videos.
 \end{itemize}
 
+\end{comment}
+
+\begin{comment}
 
 \section{Reference}
 
@@ -246,7 +347,7 @@ IDE and Tools & Git, CodeBlocks, Visual Studio, NetBeans, Eclipse, Android Studi
         Email : \href{mailto:nur.yanhaona@konasl.com}{nur.yanhaona@konasl.com} \newline
         Linkedin : \url{www.linkedin.com/in/yanhaona/}
 \end{tabular}
-
+\end{comment}
 %\newpage
 %\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
 
