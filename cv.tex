@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 %A Few Useful Packages
 
@@ -13,7 +13,7 @@
 % an alternative to Layaureo can be ** \usepackage{fullpage} **
 \usepackage{fullpage}
 \usepackage{geometry}
-\geometry{margin={0.32in,0.3in,0.3in,0.32in}}
+\geometry{left=0.2in,right=0.2in,top=0.2in,bottom=0.1in} %margin
 \usepackage{supertabular}         %for Grades
 \usepackage{titlesec}         %custom \section
 
@@ -45,7 +45,7 @@ ItalicFont = Fontin-Italic.otf
 %http://stefano.italians.nl/archives/26
 
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{0.2pt}{0.1pt}
+\titlespacing{\section}{0pt}{-0.15cm}{0cm}
 \setlength{\floatsep}{-0.5cm} % for reducing space
 \addtolength{\parskip}{-0.5mm} %for reducing spcae
 
@@ -86,11 +86,11 @@ ItalicFont = Fontin-Italic.otf
 %--------------------TITLE-------------
 \par{\centering
     {\Huge Joy \textsc{Ghosh}
-  }\bigskip\par}
+  }\par}
 
 %--------------------SECTIONS-----------------------------------
 %Section: Personal Data
-\begin{tabular}{p{1.5cm}p{4cm}p{5cm}p{1.5cm}p{5cm}}
+\begin{tabular}{p{1.5cm}p{5cm}p{5cm}p{1.5cm}p{5cm}}
      \textsc{Email} & \href{mailto:joyghosh826@gmail.com}{joyghosh826@gmail.com}
      & & 
      \textsc{Website} & \href{www.ijoyghosh.com}{www.ijoyghosh.com} \\
@@ -106,7 +106,7 @@ ItalicFont = Fontin-Italic.otf
 \begin{itemize}
     \item Graduate Research Assistant at \href{http://compsci.colostate.edu}{\textbf{Dept. of Computer Science}}, \href{https://www.coloslostate.edu}{\textbf{\textbf{Colorado State University}}} \hfill (Aug 2019 - Present)
     
-    Area - \textbf{Software Engineering}. Has started working on automating Software Documentation Updating procedures. 
+    Area - \textbf{Software Engineering}. Working on automatically detecting Domain Data Constraints in Software Documentation files. 
     
     \item Junior Software Engineer at \href{http://www.konai.com}{\textsc{KONA Software Lab Ltd.}}, Dhaka \hfill (Feb 2018 - May 2019)
     %\setlist{nolistsep}
@@ -242,6 +242,13 @@ Framework & Laravel, Spring MVC \\
         %\item 
         Developed a tool where people can upload \& retrieve files to a \textbf{Distributed Network}. \textbf{Fault Tolerance} is achieved via \textbf{Replication} and \textbf{Erasure Coding}.
         Used \textbf{Java}, \textbf{TCP}, \textbf{Reed-Solomon} API.
+    %\end{itemize}
+    
+    \item \textsc{P2P Network} - 
+    %\begin{itemize}
+        %\item 
+        Developed a tool like \textbf{Pastry} from scratch to upload files to a \textbf{Distributed Network}.
+        Used \textbf{Java}, \textbf{TCP}.
     %\end{itemize}
     
     
